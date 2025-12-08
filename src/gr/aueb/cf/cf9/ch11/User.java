@@ -1,7 +1,7 @@
 package gr.aueb.cf.cf9.ch11;
 
 /**
- * Java Bean
+ * Define User Java Bean
  */
 
 public class User {
