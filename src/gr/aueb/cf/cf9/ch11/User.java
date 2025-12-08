@@ -1,5 +1,9 @@
 package gr.aueb.cf.cf9.ch11;
 
+/**
+ * Java Bean
+ */
+
 public class User {
     private long id;
     private String firstname;
