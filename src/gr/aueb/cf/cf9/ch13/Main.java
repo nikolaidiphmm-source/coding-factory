@@ -4,5 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         HelloUtil.sayHello();
+        OnlyOneCodingFactory onlyOneCodingFactory1 = OnlyOneCodingFactory.getInstance();
+        OnlyOneCodingFactory onlyOneCodingFactory2 = OnlyOneCodingFactory.getInstance();
+
+
+
     }
 }
