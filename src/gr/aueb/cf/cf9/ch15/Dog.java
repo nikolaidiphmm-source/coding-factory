@@ -1,13 +1,12 @@
 package gr.aueb.cf.cf9.ch15;
 
-public class Dog implements ISpeakable{
+public class Dog implements ISpeakable {
     private String name;
     private int age;
 
     public Dog() {
 
     }
-
     public Dog(String name, int age) {
         this.name = name;
         this.age = age;
@@ -30,7 +29,7 @@ public class Dog implements ISpeakable{
     }
 
     @Override
-    public void Speak() {
-        System.out.println(name + "says hello!");
+    public void speak() {
+        System.out.println(  name + " says hello!!");
     }
 }
