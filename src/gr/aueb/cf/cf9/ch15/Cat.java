@@ -3,8 +3,12 @@ package gr.aueb.cf.cf9.ch15;
 public class Cat implements ISpeakable {
     private String name;
 
-    public Cat(String alice) {
+    public Cat() {
 
+    }
+
+    public Cat(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -16,7 +20,7 @@ public class Cat implements ISpeakable {
     }
 
     @Override
-    public void Speak() {
-        System.out.println("Meow!");
+    public void speak() {
+        System.out.println( "Meow!");
     }
 }
