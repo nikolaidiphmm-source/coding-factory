@@ -3,7 +3,7 @@ package gr.aueb.cf.cf9.ch15;
 public class Cat implements ISpeakable {
     private String name;
 
-    public Cat() {
+    public Cat(String alice) {
 
     }
 

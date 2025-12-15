@@ -5,4 +5,6 @@ public interface ISpeakable {
      * Makes a sound like a speech
      */
     void Speak();
+
+    void speak();
 }
