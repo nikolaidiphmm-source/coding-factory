@@ -13,12 +13,14 @@ public class Main {
         bag.add("orange");
         bag.add("apple");       //No duplicates allowed
 
+        //Time - complexity 0(1)
         if (bag.contains("apple")) {        //override equals
             bag.remove("apple");
         } else {
-            System.out.println("Apple not found.");
+            System.out.println("Apple not included in the bag.");
         }
 
+        bag.removeIf(item -> item.startsWith("b"));
         bag.forEach(System.out::println);
 
     }
