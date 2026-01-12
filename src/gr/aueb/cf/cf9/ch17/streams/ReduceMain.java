@@ -3,7 +3,9 @@ package gr.aueb.cf.cf9.ch17.streams;
 import gr.aueb.cf.cf9.ch17.sorting.Product;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ReduceMain {
     public static void main(String[] args) {
@@ -21,6 +23,25 @@ public class ReduceMain {
         
         int totalSum2 = numbers.stream()
                 .reduce(0, Integer::sum);       //Integer has a static method sum()
-        
+
+        int sumOfQuantities = products.stream()
+                .mapToInt(Product::getQuantity)
+                .reduce(0, Integer::sum);
+
+        int sumOfQuantities2 = products.stream()
+                .mapToInt(Product::getQuantity)
+                .sum();                     //works with primitive types
+
+        //Sorted list with product description for quantities >= 100
+        var sortedProductsDescriptionsGEQ100 = products.stream()
+                .filter(p -> p.getQuantity() >= 100)
+                .sorted(Comparator.comparing(Product::getDescription))  // products
+                .map(Product::getDescription)                           // String
+                .map(String::toUpperCase)
+                .collect(Collectors.toCollection(ArrayList::new));
+
+        sortedProductsDescriptionsGEQ100.forEach(System.out::println);
+
+
     }
 }
