@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class LowerCaseAssert {
     public static void main(String[] args) {
-        String s = "HFHGa";   //only lower case, at least 8 char, at least 1 character is lowercase
+        String s = "HFHGHJKSJWa";   //only lower case, at least 8 char, at least 1 character is lowercase
 
         Pattern pattern = Pattern.compile("(?=.*?[a-z])^.{8,}$");      //zero-length assertion
         Matcher matcher = pattern.matcher(s);
