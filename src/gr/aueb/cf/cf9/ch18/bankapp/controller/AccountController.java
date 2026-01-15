@@ -22,7 +22,7 @@ public class AccountController {
         this.accountService = accountService;
     }
 
-    public AccountReadOnlyDTO createAccount(String iban, BigDecimal balance) throws ValidationException {
+    public AccountReadOnlyDTO createNewAccount(String iban, BigDecimal balance) throws ValidationException {
         AccountReadOnlyDTO readOnlyDTO;
         AccountInsertDTO insertDTO = new AccountInsertDTO(iban, balance);
 
